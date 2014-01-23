@@ -1,0 +1,19 @@
+body{
+  background-color: grey;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  margin: 10px;
+  float: left;
+}
+
+#container div:nth-child(2n){
+  border: solid 3px red;
+}
+#container div:nth-child(2n-1){
+  border: solid 3px blue;
+}
+
