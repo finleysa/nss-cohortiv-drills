@@ -1,0 +1,26 @@
+body{
+  background-color: grey;
+}
+
+.shell{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  float: left;
+  text-align: center;
+  font-size: 90px;
+  border: 3px;
+  background-color: black;
+  color: white;
+}
+
+.clear{
+  clear: both;
+}
+
+#start{
+  width: 360px;
+  height 50px;
+  font-size: 40px;
+}
+

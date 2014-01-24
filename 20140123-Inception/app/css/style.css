@@ -1,0 +1,17 @@
+body{
+  background-color: grey;
+}
+
+.box{
+  border: 2px solid blue;
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#boxes{
+  height: 300px;
+  width: 300px;
+}
+
+

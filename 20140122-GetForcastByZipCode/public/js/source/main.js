@@ -18,7 +18,7 @@
     $option.text(zipCode);
     $('#list').append($option);
   }
-  
+
   function getWeather(){
     var zip = $('#list').val();
     $.getJSON('http://api.wunderground.com/api/308b7b9ab10ef4d2/forecast/settings/q/'+zip+'.json?callback=?', recieve);
