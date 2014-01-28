@@ -7,7 +7,7 @@
 
   function initialize(){
     $('#makeSquares').click(makeSquares);
-    $('.box').click(sendToContainer);
+    $('.box').on('click', '.box',sendToContainer);
   }
 
   function makeSquares(){
