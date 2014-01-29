@@ -9,6 +9,17 @@
     $('#addzip').click(addZip);
     $('#getcams').click(showCameras);
     $('#clear').click(clear);
+    $('.label').hover(highlight);
+  }
+
+  function highlight(){
+    var divArray = $('#container div');
+    
+    for(var i=0; i< divArray.length; i++){
+      if (divArray.attr('id') === this.attr('id')){
+        divArray[i].css('border','red');
+      }
+    }
   }
 
   function clear(){
@@ -44,34 +55,42 @@
         for(; j<images.length; j++){
           var $label = $('<label>');
           $label.addClass('label');
+          $label.attr('id', j);
           if(images[j].neighborhood.length > 1){
             $label.text(j+1 +': '+images[j].neighborhood);
           }else{
             $label.text(j+1+': No information provided');
           }
           $('#container').append($label);
-          makeSpace();
           count++;
           if(count === 5){
             break;
           }
+          if(j === images.length - 1){
+            break;
+          }
         }
       }
-      if(count >= 5){
+      makeSpace();
+      if(count < 10){
         for(; i<images.length; i++){
           var $div = $('<div>');
           $div.addClass('box');
           console.log('url('+images[i].WIDGETCURRENTIMAGEURL+')');
           $div.css('background-image', 'url('+images[i].WIDGETCURRENTIMAGEURL+')');
+          $div.attr('id', i);
+          $div.text(i+1);
           $('#container').append($div);
-          makeSpace();
           count++;
           if(count === 10){
             break;
           }
         }
       }
+      makeSpace();
       count =0;
+      i++;
+      j++;
     }
   }
 })();
